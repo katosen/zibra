@@ -1,0 +1,12 @@
+pull_request_rules:
+  - name: automatic merge for dependeabot
+    conditions:
+      - and:
+          - "author=dependabot[bot]"
+          - or:
+              - "title~=Bump core-js from"
+              - "title~=Bump @vue/compiler-sfc from"
+              - "title~=Bump vue from"
+    actions:
+      merge:
+        method: rebase
